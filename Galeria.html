@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galeria</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('desktop-wallpaper-maya-mayan-art.jpg');
+    background-size: cover;
+  }
+
+  #galeriaLibro {
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 650px; /* Tamaño fijo */
+    max-height: 90vh;
+    overflow: auto;
+  }
+
+  .pagina img {
+    max-width: 600px;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+  }
+
+  #anterior, #siguiente {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+
+  #anterior:hover, #siguiente:hover {
+    background-color: #005f73;
+  }
+
+  #anterior { left: 10px; }
+  #siguiente { right: 10px; }
+
+  #descripcion {
+    font-size: 16px;
+    color: #333;
+    margin-top: 20px;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+  }
+.Estilo1 {
+	font-size: xx-large;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+</style>
+</head>
+<body>
+
+<p align="center" class="Estilo1">Datos interesantes </p>
+<p align="center" class="Estilo1">&nbsp;</p>
+<div id="galeriaLibro">
+  <div id="paginaActual" class="pagina">
+    <img src="ruta/a/tu/imagen1.jpg" alt="Descripcion de la imagen 1" style="opacity: 1;">
+  </div>
+  <div id="descripcion">Descripcion de la imagen 1</div>
+  <button id="anterior">Anterior</button>
+  <button id="siguiente">Siguiente</button>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const imagenes = ["44af77499274b600f1924f06368fc9d7.jpg", "50.jpg", "245840-Tonina.webp","descarga (1).jpeg","images (1).jpeg","descarga.jpeg","Tonina_SinPostal-7.webp","Tonina_SinPostal-14.webp","Tonina_SinPostal-19.webp","Tonina_SinPostal-21.webp","tonina-2-shu.webp","tonina-chiapas-princ-min.jpg"];
+  const descripciones = [
+    "El nombre de la zona arqueologica Tonina, ubicada en Chiapas, se deriva de una palabra en idioma tzeltal, que significa Casa de Piedra o Lugar Donde se Levantan Esculturas en Piedra en Honor del Tiempo.",
+    "Se dice que su ubicacion fue estrategica, ya que esta al extremo occidental del area maya, en una de las partes mas altas del valle de Ocosingo.",
+    "Se conforma por una escalinata central de 260 escalones, siete plataformas y 13 templos en la cima.",
+    "Ahi mismo podras admirar el Altar de los Sacrificios y varias muestras escultoricas.",
+    "En la tercera plataforma veras el Palacio del Inframundo.",
+    "En la cuarta encontraras el Palacio de las Grecas y la Guerra, donde se puede observar una fachada formada por cuatro grecas espirales escalonadas.",
+    "El acceso a la zona arqueologica es a traves de la cancha del juego de pelota que esta situada en la gran plataforma.",
+    "Te impresionaras en la sexta plataforma donde esta el mural de los cuatro soles, una especie de libro hecho de estuco que simboliza el mito de las Cuatro Eras Cosmogonicas que atraviesa el mundo, lo impactante es que los soles son representados con cabezas humanas que caen.",
+    "En esta misma plataforma se ubica el templo del Monstruo de la Tierra que tiene un monumento del monstruo devorando una esfera solar de piedra.",
+    "En la plataforma numero siete podras encontrar los templos de los Prisioneros y del Espejo Humeante que se ubican en el punto mas prominente de la zona, siendo el mas alto de Mesoamerica.",
+    "La piramide mide 74 metros de altura, mucho mas alta que la del Sol en Teotihuacan.",
+    "Se ha determinado que Tonina, Chiapas tiene una antiguedad de 700 anos.",
+    "Las representaciones de prisioneros en estuco y piedra determinan que su apogeo fue entre finales del siglo VI y principios del X d.C., siendo una potencia militar.",
+  ];
+  let indiceActual = 0;
+
+  const actualizarImagen = () => {
+    const pagina = document.getElementById('paginaActual');
+    const descripcion = document.getElementById('descripcion');
+    const nuevaImg = document.createElement('img');
+    nuevaImg.src = imagenes[indiceActual];
+    nuevaImg.alt = `Imagen ${indiceActual + 1}`;
+    nuevaImg.style.opacity = 0;
+    nuevaImg.onload = () => {
+      pagina.innerHTML = '';
+      pagina.appendChild(nuevaImg);
+      descripcion.innerText = descripciones[indiceActual];
+      requestAnimationFrame(() => {
+        nuevaImg.style.opacity = 1;
+        descripcion.style.opacity = 1;
+      });
+    };
+  };
+
+  document.getElementById('anterior').addEventListener('click', () => {
+    if (indiceActual > 0) {
+      indiceActual--;
+      descripcion.style.opacity = 0;
+      actualizarImagen();
+    }
+  });
+
+  document.getElementById('siguiente').addEventListener('click', () => {
+    if (indiceActual < imagenes.length - 1) {
+      indiceActual++;
+      descripcion.style.opacity = 0;
+      actualizarImagen();
+    }
+  });
+
+  actualizarImagen(); // Inicializa la primera imagen
+});
+</script>
+
+</body>
+</html>

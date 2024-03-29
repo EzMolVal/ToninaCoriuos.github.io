@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Actividades</title>
+<style type="text/css">
+body {
+    background-image: url(desktop-wallpaper-maya-mayan-art.jpg);
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+}
+
+.Estilo1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    animation: fadeIn 2s;
+}
+
+.container {
+    opacity: 0; /* Inicialmente oculto hasta que se haga scroll */
+    transform: translateY(20px); /* Inicialmente desplazado hacia abajo */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.visible {
+    opacity: 1; /* Visible cuando entra en el viewport */
+    transform: translateY(0); /* Vuelve a su posición original */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.activity {
+    margin: 20px auto;
+    width: 80%;
+    font-size: 1.2em;
+    text-align: justify;
+}
+
+.activity-header {
+    font-weight: bold;
+    font-size: 1.4em;
+    margin-top: 40px;
+    transition: color 0.3s ease;
+}
+
+.activity-header:hover {
+    color: #FFD700; /* Cambio de color al pasar el ratón */
+}
+
+<style type="text/css">
+/* Estilos existentes */
+
+.activity img {
+    transition: transform 0.5s ease; /* Suaviza la transición */
+    margin: 10px 0; /* Espaciado para visualización */
+}
+
+.activity img:hover {
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen */
+}
+ /* Añade esto para el efecto de giro */
+        .next-button img {
+            transition: transform 0.5s ease; /* Suaviza la transición */
+        }
+
+        .next-button:hover img {
+            transform: rotate(360deg); /* Rota la imagen al pasar el cursor */
+        }
+/* Resto de estilos */
+</style>
+</head>
+
+<body>
+<div class="Estilo1">Actividades</div>
+<div class="container" id="container">
+  <div class="activity">
+        <div class="activity-header">Juego de Pelota</div>
+        <p>Apenas entras a la Zona Arqueológica y ya es posible admirar una muy peculiar cancha de juego de pelota, pues tiene esculturas de personas hincadas con las manos hacia atrás, lo cual indica que ésta cancha era para prisioneros que capturaban de ciudades enemigas y a quienes sacrificaban. </p>
+        <p><img src="tonina-01.jpg" alt="61154" width="436" height="289"><img src="s5NET0.gif" alt="51521" width="400" height="224"></p>
+  </div>
+    <div class="activity">
+        <div class="activity-header">Acrópolis</div>
+        <p>La gran pirámide de Toniná se encuentra construida sobre una colina, que a primera vista pueden parecer recintos independientes, pero todo ese conjunto es una sola construcción dividida en 7 niveles, donde hay diversos templos, palacios y murales que han sobrevivido a más de 1,000 años. </p>
+        <p><img src="images (1).jpeg" alt="s" width="395" height="196"><img src="tumblr_0b34db398969169539acf6824244dbb5_9f1e0605_500.gif" alt="2552" width="500" height="271"></p>
+    </div>
+    <div class="activity">
+        <div class="activity-header">Cima de la Gran Pirámide</div>
+        <p>Después de subir por 260 escalones se llega a la cima de la gran pirámide, que con 75 metros supera en altura a la pirámide del Sol en Teotihuacan y a la de Cholula en Puebla, lo que le da el título de la pirámide prehispánica más grande de todo el país, en cuanto a altura se refiere. </p>
+        <p><img src="Panorama-Tonina.jpg" alt="adx" width="458" height="386"><img src="2922d217-88e1-4409-b502-a45f96b39419.gif" alt="251" width="450" height="248"></p>
+    </div>
+</div>
+
+<script>
+// Función para detectar cuando el contenido entra en el viewport
+function reveal() {
+    var reveals = document.querySelectorAll('.container');
+
+    for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 150; // Cuánto del elemento debe estar visible
+
+        if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("visible");
+        } else {
+            reveals[i].classList.remove("visible");
+        }
+    }
+}
+
+window.addEventListener('scroll', reveal);
+reveal(); // Llama a la función al cargar la página para verificar si el contenido ya está visible
+</script>
+<p align="right"><a href="Referencias.html" target="_self" class="next-button"><img src="adelante.png" alt="next" width="146" height="89" border="0" /></a></p>
+
+</body>
+
+</html>

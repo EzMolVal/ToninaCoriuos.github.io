@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comentarios y Sugerencias - Tem�tica Maya</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4e9d3;
+            background-image: url('fondo-maya.jpg'); /* Aseg�rate de tener una imagen de fondo con tem�tica maya */
+            background-size: cover;
+            color: #5a432e;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 600px;
+            margin: auto;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #8a6d3b;
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        input[type=text], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #8a6d3b;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #7a5c2f;
+        }
+
+        .notification {
+            display: none;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 5px;
+            color: #fff;
+        }
+
+        .success {
+            background-color: #4CAF50;
+        }
+
+        .error {
+            background-color: #f44336;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Envianos tus comentarios y sugerencias</h1>
+        <div id="notification" class="notification"></div>
+        <form id="commentForm">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" placeholder="Tu nombre...">
+
+            <label for="email">Correo electronico:</label>
+            <input type="text" id="email" name="email" placeholder="Tu correo electronico...">
+
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" placeholder="Escribe tus comentarios o sugerencias aqui..." rows="5"></textarea>
+
+            <button type="button" onClick="submitForm()">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        function submitForm() {
+            const notification = document.getElementById("notification");
+        
+            notification.className = "notification success";
+            notification.textContent = "Tu comentario ha sido enviado exitosamente.";
+            notification.style.display = "block";
+            
+         
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Principal</title>
+</head>
+
+<frameset rows="30,*" cols="*" framespacing="0" frameborder="no" border="0" bordercolor="#996666">
+  <frame src="top.html" name="topFrame" scrolling="No" noresize="noresize" id="topFrame" title="topFrame" />
+  <frameset rows="*,21" cols="*" framespacing="0" frameborder="no" border="0">
+		<frameset rows="*" cols="*,35" framespacing="0" frameborder="no" border="0">
+		<frameset rows="*" cols="190,*" framespacing="0" frameborder="no" border="0">
+		  <frame src="left.html" name="leftFrame" scrolling="No" noresize="noresize" id="leftFrame" title="leftFrame" />
+		<frame src="Inicio.html" name="mainFrame" id="mainFrame" title="left" />
+	</frameset>
+		<frame src="151.html" name="rightFrame" scrolling="No" noresize="noresize" id="rightFrame" title="rightFrame" />
+	</frameset>
+		<frame src="down.html" name="bottomFrame" scrolling="No" noresize="noresize" id="bottomFrame" title="bottomFrame" />
+  </frameset>
+</frameset>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagen como botón con menú desplegable</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <button id="menuButton" onclick="toggleMenu()"><img src="gratis-png-maya-civilizacion-2012-fenomeno-calendario-maya-calendario-azteca.png" alt="Botón" class="button-image"></button>
+        <div class="menu" id="menu">
+            <!-- Aquí va tu menú -->
+            <ul>
+                <li><a href="#">Opción 1</a></li>
+                <li><a href="#">Opción 2</a></li>
+                <li><a href="#">Opción 3</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<noframes><body>
+</body>
+</noframes></html>

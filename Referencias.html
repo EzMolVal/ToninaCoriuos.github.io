@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitas a Tonina</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            text-align: center;
+        }
+
+        header {
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .intro {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.2);
+            margin: 20px auto;
+            width: 90%;
+            max-width: 800px;
+        }
+
+        .videos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .video {
+            margin: 10px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            width: 300px;
+        }
+
+        .video iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        footer {
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.2);
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Experiencias en Tonina</h1>
+    </header>
+
+    <div class="intro">
+        <p>Descubre las maravillosas experiencias de quienes han visitado las ruinas de Tonina, Chiapas. A traves de sus ojos, recorre este lugar lleno de historia y belleza.</p>
+    </div>
+
+    <div class="videos">
+        <!-- Ejemplo de video, repite este bloque para a�adir m�s videos -->
+        <div class="video">
+            <iframe src="1.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>Visita a Tonina, Chiapas por Youtuber Viajando con Arturo</p>
+        </div>
+        
+		<div class="video">
+            <iframe src="GeoTravel MX.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>Visita a Tonina, Chiapas por Youtuber  GeoTravel MX</p>
+        </div>
+		
+		<div class="video">
+            <iframe src="2.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>Visita a Tonina, Chiapas por Youtubers Sin Postal</p>
+        </div><!-- Repite el bloque de arriba para cada video que desees a�adir -->
+    </div>
+
+    <footer>
+    </footer>
+</body>
+</html>

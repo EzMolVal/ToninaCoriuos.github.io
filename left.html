@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Documento sin título</title>
+<style type="text/css">
+body {
+    background-image: url(palenque-glyphs-edit1_ddfe5c75_1200x630.jpeg);
+    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+
+.menu {
+	width: 145px;
+	border: 3px solid #996600;
+	background-color: rgba(153, 204, 102, 0.8);
+	margin: 20px;
+	padding: 10px;
+	border-radius: 10px;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+	height: auto;
+}
+
+.menu-item {
+    color: #FFFFFF;
+    text-align: center;
+    margin: 10px 0;
+    padding: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.menu-item h3 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    width: 100%;
+}
+
+.menu-item img {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.menu-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+<div class="menu" id="mainMenu">
+  <div class="menu-item" style="background-color: #996600;"><h3><img src="puro-gotta-sweep.gif" width="49" height="39" id="gottaSweepGif">Menu</h3>
+  </div>
+  <div class="menu-item"><a href="Historia.html" target="mainFrame"><img src="gratis-png-maya-civilizacion-2012-fenomeno-calendario-maya-calendario-azteca.png" alt="" width="54" height="52" />Historia</a></div>
+  <div class="menu-item"><a href="Actividades.html" target="mainFrame"><img src="gratis-png-maya-civilizacion-2012-fenomeno-calendario-maya-calendario-azteca.png" alt="" width="54" height="52" />Actividades</a></div>
+  <div class="menu-item"><a href="Ubicacion.html" target="mainFrame"><img src="gratis-png-maya-civilizacion-2012-fenomeno-calendario-maya-calendario-azteca.png" alt="" width="54" height="52" />Ubicación</a></div>
+  <div class="menu-item"><a href="mapa.html" target="mainFrame"><img src="gratis-png-maya-civilizacion-2012-fenomeno-calendario-maya-calendario-azteca.png" alt="" width="54" height="52" /></a>Mapa</div>
+  <div class="menu-item"><a href="Contactos.html" target="mainFrame"><img src="gratis-png-maya-civilizacion-2012-fenomeno-calendario-maya-calendario-azteca.png" alt="" width="54" height="52" />Contactos</a></div>
+  <div class="menu-item"><a href="Recomendaciones.html" target="mainFrame"><img src="gratis-png-maya-civilizacion-2012-fenomeno-calendario-maya-calendario-azteca.png" alt="" width="54" height="52" />Recomendaciones</a></div>
+</div>
+<audio id="sweepSound" src="videoplayback.m4a"></audio>
+<script>
+// Selecciona el GIF y el audio
+var gottaSweepGif = document.getElementById('gottaSweepGif');
+var sweepSound = document.getElementById('sweepSound');
+
+// Añade un listener para el evento de clic en el GIF
+gottaSweepGif.addEventListener('click', function() {
+    sweepSound.play(); // Reproduce el sonido
+});
+</script>
+</body>
+</html>

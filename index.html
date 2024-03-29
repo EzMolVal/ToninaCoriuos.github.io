@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inicio</title>
+    <style>
+        body {
+            background: url('TONINA.gif') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #empezar, #inicio {
+            cursor: pointer;
+        }
+        #empezar {
+            display: block;
+        }
+        #inicio {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<img id="empezar" src="VAMO.png" alt="Empezar"><img src="puro-gotta-sweep.gif" width="259" height="284">
+<img id="inicio" src="BOTON.png" alt="Inicio">
+
+<audio id="musica" src="TOON.mp3"></audio>
+
+<script>
+    document.getElementById('empezar').addEventListener('click', function() {
+        document.getElementById('musica').play();
+        this.style.display = 'none';
+        
+        setTimeout(function() {
+            document.getElementById('inicio').style.display = 'block';
+        }, 10000); // Aparece después de 10 segundos
+    });
+
+    document.getElementById('inicio').addEventListener('click', function() {
+        window.location.href = 'right.html'; // Cambia esto por la URL de tu otra página
+    });
+</script>
+
+</body>
+</html>
